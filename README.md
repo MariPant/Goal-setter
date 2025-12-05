@@ -2,9 +2,6 @@
 
 ## Two Backend Services + Frontend (TypeScript, Express, JSON DB, React/Redux)
 
-## **Team Members**
-
-* *Marina Panteleev – x109430*
 
 # **Project Overview**
 
