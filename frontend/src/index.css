@@ -1,0 +1,276 @@
+/* ---------- ROOT COLORS (EASY TO EDIT) ---------- */
+:root {
+  --black: #000000;
+  --cypress: #4c583e;
+  --moss: #2c3424;
+  --cedar: #959581;
+  --offwhite: #fefbf6;
+  --aloe: #daded8;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--cedar);
+  color: var(--black);
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--black);
+}
+
+a {
+  color: var(--cypress);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cedar);
+}
+
+/* ---------- LAYOUT / CONTAINERS ---------- */
+.container, .content { 
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--offwhite);
+  border: 1.5px solid var(--cedar);
+  border-radius: 8px; 
+  text-align: center;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  background: var(--cypress);
+  color: var(--offwhite);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.header-left span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- HEADING ---------- */
+.heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.heading h1 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+
+.heading p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--moss);
+}
+
+/* ---------- FORMS ---------- */
+.form {
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  color: var(--black);
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--cedar);
+  border-radius: 6px;
+  background: var(--offwhite);
+  color: var(--black);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.goal-edit-input:focus {
+  outline: none;
+  border-color: var(--cypress);
+  box-shadow: 0 0 0 2px rgba(76, 88, 62, 0.2);
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: var(--moss);
+  color: var(--offwhite);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-block {
+  width: 40%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* ---------- GOALS GRID ---------- */
+.goals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Single goal card */
+.goal {
+  background-color: var(--aloe);
+  padding: 16px 18px 14px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.goal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Top row: date + close icon */
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.goal-date {
+  color: var(--moss);
+  opacity: 0.8;
+}
+
+/* Title text */
+.goal-title {
+  margin: 4px 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cypress);
+  word-break: break-word;
+  cursor: pointer;
+}
+
+/* Edit input inside goal */
+.goal-edit-input {
+  width: 80%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--cedar);
+  background: #fdfaf4;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--black);
+}
+
+/* Close (delete) button */
+.goal .close {
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.1rem;
+  color: var(--moss);
+}
+
+.goal .close svg {
+  pointer-events: none;
+}
+
+.goal .close:hover {
+  transform: scale(1.15);
+}
+
+/* ---------- SPINNER ---------- */
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 700px) {
+  .container {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .goals {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .btn-block {
+    width: 60%;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "mern-stack-project",
+  "version": "1.0.0",
+  "description": "Two Express backend services (gateway + core API) in TypeScript with JSON database.",
+  "main": "dist/app1.js",
+  "scripts": {
+  "build": "tsc",
+  "start:app1": "node dist/app1.js",
+  "start:app2": "node dist/app2.js",
+  "dev:app1": "ts-node-dev src/app1.ts",
+  "dev:app2": "ts-node-dev src/app2.ts",
+
+  "client": "npm start --prefix frontend",
+
+  "start:all": "concurrently \"npm run start:app2\" \"npm run start:app1\" \"npm run client\"",
+  "dev:all": "concurrently \"npm run dev:app2\" \"npm run dev:app1\" \"npm run client\""
+  },
+
+  "dependencies": {
+    "axios": "^1.7.0",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.0"
+  }
+}

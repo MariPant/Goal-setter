@@ -1,0 +1,22 @@
+[
+  {
+    "id": "8c28ba38-586f-4a54-8b2c-b038576572b4",
+    "text": "sauna",
+    "createdAt": "2025-12-05T20:35:55.581Z"
+  },
+  {
+    "id": "ab9cebab-db4c-451b-9d9a-19fcd3401dd1",
+    "text": "Track progress weekly",
+    "createdAt": "2025-12-05T21:23:05.679Z"
+  },
+  {
+    "id": "db942ca8-242f-4d9e-81ad-d1099592853b",
+    "text": "Track progress monthly",
+    "createdAt": "2025-12-05T21:30:35.514Z"
+  },
+  {
+    "id": "0f2a0a1b-f7fb-4a66-bfc3-6e5ad2000707",
+    "text": "Read 2 book",
+    "createdAt": "2025-12-05T21:34:49.990Z"
+  }
+]
